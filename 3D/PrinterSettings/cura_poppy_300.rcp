@@ -1,0 +1,152 @@
+[print]
+name = cura_poppy_300
+defaultQuality = z6xZWRyZvC6Gs69W1m4C1ONzQ92Zaz1I
+travelSpeedMin = 80
+travelSpeedMax = 130
+firstLayerSpeedMin = 30
+firstLayerSpeedMax = 30
+infillSpeedMin = 25
+infillSpeedMax = 55
+skinSpeedMin = 30
+skinSpeedMax = 60
+infillType = 0
+innerPerimeterMin = 25
+innerPerimeterMax = 50
+outerPerimeterMin = 20
+outerPerimeterMax = 45
+printSpeedMin = 30
+printSpeedMax = 55
+nozzleDiameter = 0.5
+gcodeFlavour = 0
+retractionCombing = True
+combing = 1
+multiVolumeOverlap = 0
+cutOffObjectBottom = 0
+shellThickness = 0.8
+infillTopBottomThickness = 0.8
+infillDensityPercent = 20
+supportType = 1
+platformAdhesion = 0
+dualExtrusion = 0
+wipeAndPrimeTower = True
+oozeShield = False
+enableRetraction = True
+retractionSpeed = 15
+retractionDistance = 1
+multiExtruderSwitchAmount = 16
+startGCode = """
+;--------------------------------------
+; RF1000
+;--------------------------------------
+G28 ; home all axes
+G1 Z5 F500 ; lift nozzle
+{IF_BED}M190 S{BED}
+{IF_EXT0}M104 T0 S{TEMP0}
+; Wait for all used extruders to reach temperature
+{IF_EXT0}M109 T0 S{TEMP0}
+G90 ; use absolute coordinates
+M82 ; use absolute distances for extrusion
+G92 E0 ; start line
+M3001 ; Aktivate Z-Compensation 
+; Move Z-axis n-steps up (see manual)
+;M3006 S-300 ; + n-steps bed down // - n-steps bed up!
+G1 F300 E-0.5
+G1 X230 Y35 Z0.35 F5000
+G1 F800 E10
+G1 X20 E25 F1000
+; Acceleration up to...
+; Acc printing
+M201 X3000 Y3000 Z100
+; Acc travel
+M202 X3000 Y3000 Z100
+; ZJERK 
+M205 Z0.1
+G92 E0
+;--------------------------------------
+"""
+endGCode = """
+;--------------------------------------
+; RF1000 end code
+;--------------------------------------
+G92 E0
+M107
+M104 S0
+M140 S0
+G91
+; retract filament
+G1 E-5 F300
+; Output Object
+M400
+M3079
+M400
+;Steppers off
+M84                                         
+;Acceleration to default...
+;Acc printing
+M201 X1000 Y1000 Z1000
+;Acc travel
+M202 X1000 Y1000 Z1000
+;--------------------------------------
+"""
+preSwitchExtruderCode = 
+postSwitchExtruderCode = 
+wipeAndPrimeTowerVolume = 15
+retractionMinimumTravel = 0.1
+minimumExtrusionBeforeRetract = 0.02
+zhop = 0
+skirtLineCount = 0
+skirtDistance = 3
+skirtMinimumLength = 150
+solidInfillTop = True
+solidInfillBottom = True
+infillOverlapPercent = 20
+supportStructureType = 0
+supportOverhang = 10
+supportFillPercent = 20
+supportDistanceXY = 0.7
+supportDistanceZ = 0.1
+supportExtruder = 0
+spiralizeOuterContour = False
+brimWidth = 5
+raftExtraMargin = 5
+raftLineSpacing = 1
+raftBaseThickness = 0.3
+raftBaseWidth = 0.7
+raftInterfaceThickness = 0.2
+raftInterfaceLineWidth = 0.2
+raftAirGap = 0
+raftAirGapLayer0 = 0
+raftSurfaceLayer = 1
+fixCombineEverythingA = True
+fixCombineEverythingB = False
+fixKeepOpenFaces = False
+fixExtensiveStitching = False
+fanFullAtHeight = 3
+perimeterBeforeInfill = True
+minimumSpeed = 10
+coolHeadLift = False
+numQuality = 4
+[quality_0]
+name = 0.1 mm
+signature = 327jfkcjbg9vEgfuMecw63oeWBeNacnd
+layerHeight = 0.1
+layer0widthPercent = 100
+firstLayerHeight = 0.35
+[quality_1]
+name = 0.125 mm
+signature = nZbp6iBGWt6lbmBtmzqfKy84pZh0s4Wp
+layerHeight = 0.125
+layer0widthPercent = 110
+firstLayerHeight = 0.35
+[quality_2]
+name = 0.2 mm
+signature = Dc5nS1UM3LXvwAB03DiYwWJG1qRvuoC4
+layerHeight = 0.2
+layer0widthPercent = 110
+firstLayerHeight = 0.35
+[quality_3]
+name = 0.3 mm
+signature = z6xZWRyZvC6Gs69W1m4C1ONzQ92Zaz1I
+layerHeight = 0.3
+layer0widthPercent = 110
+firstLayerHeight = 0.35

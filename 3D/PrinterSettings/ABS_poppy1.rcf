@@ -1,0 +1,10 @@
+[filament]
+name = ABS_poppy1
+diameter = 2.85
+multiplierPercent = 100
+printingTemperature = 270
+enableCooling = True
+bedTemperature = 120
+fanSpeedMin = 10
+fanSpeedMax = 100
+minimalLayerTime = 5
