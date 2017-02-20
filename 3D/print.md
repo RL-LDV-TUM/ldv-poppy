@@ -27,19 +27,19 @@ Settings for using Repetier Host with the RF1000
 
 Connections Tab:
 
-![Connections](images/printerSettings/Printer_Settings_Connections.png)
+![Connections](/images/printerSettings/Printer_Settings_Connections.png)
 
 Extruder Tab:
 
-![Extruder](images/printerSettings/Printer_Settings_Extruder.png)
+![Extruder](/images/printerSettings/Printer_Settings_Extruder.png)
 
 Printer Tab:
 
-![Printer](images/printerSettings/Printer_Settings_Printer.png)
+![Printer](/images/printerSettings/Printer_Settings_Printer.png)
 
 PrinterShape Tab:
 
-![PrinterShape](images/printerSettings/Printer_Settings_PrinterShape.png)
+![PrinterShape](/images/printerSettings/Printer_Settings_PrinterShape.png)
 
 
 
