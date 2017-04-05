@@ -1,0 +1,36 @@
+These are the parts for Poppy2 (black):
+
+amrs/arm_connector_V2.stl (2x)
+amrs/forearm_left_fixed.STL
+amrs/forearm_right_fixed.STL
+amrs/hand_left_fixed.STL
+amrs/hand_right_fixed.STL
+amrs/shoulder_left.STL
+amrs/shoulder_right.STL
+amrs/upper_arm_V2.STL (2x)
+
+head/camera_support.STL
+head/head_back_fixed.STL
+head/head_face_fixed.STL
+head/neck.STL
+head/speaker_left.STL
+head/speaker_right.STL
+
+legs/hip_left_V2.stl
+legs/hip_right.STL
+legs/hip_z_to_hip_y-connector.STL (2x)
+legs/pelvis_V2.STL
+legs/shin_fixed.STL (2x)
+legs/simple_foot_left.STL
+legs/simple_foot_right.STL
+legs/thigh_left_fixed.STL
+legs/thigh_right_fixed.STL
+
+trunk/abdomen.STL
+trunk/chestV2_fixed.STL
+trunk/i101_to_MX28_link_fixed.STL
+trunk/i101_to_MX64_link.STL
+trunk/i101-Set_to_MX64_link_V3.STL
+trunk/MX28_double_rotation_link_V2.STL
+trunk/MX64_double_rotation_link_V2.STL
+trunk/spineV2.STL
