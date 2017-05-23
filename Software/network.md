@@ -8,3 +8,22 @@ Poppy automatically connects to the Wifi SSID: **LDV-CPP**
 
 The LDV-CPP accesspoints work in bridge-mode so Poppy can be reached by: [poppy.clients.ldv.ei.tum.de](http://poppy.clients.ldv.ei.tum.de) 
 This only works when the accesspoint is connected to the lrz network. 
+
+    # interfaces(5) file used by ifup(8) and ifdown(8)
+    # Include files from /etc/network/interfaces.d:
+    source-directory /etc/network/interfaces.d
+    
+    auto eth2
+    iface eth2 inet dhcp
+    
+    iface default inet dhcp
+    
+    auto lo
+    iface lo inet loopback
+    
+    auto wlan2
+    iface wlan2 inet dhcp
+            wpa-ssid "LDV-CPP"
+            wpa-psk "*******"
+    
+    allow-hotplug wlan2 eth2
